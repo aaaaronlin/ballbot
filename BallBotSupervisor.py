@@ -110,7 +110,7 @@ def getBall():
     
     return np.array([xDist, zDist])
 
-def updateMotorVel(v, w):
+def updateMotorVel(v, w): # differential drive dynamics
     vel_r = (2*v + w*wheelBase)/2
     vel_l = (2*v - w*wheelBase)/2
     msg = "D," + str(np.round(vel_r, 4)) + "," + str(np.round(vel_l, 4)) + "n"
