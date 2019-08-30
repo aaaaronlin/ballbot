@@ -196,6 +196,7 @@ void action() {
 void initDynamics() {
   leftPID.restart();
   rightPID.restart();
+  // H-Bridge control when directions change
   if (gVR < 0 && dirR == 1) {
     sR_ = -sR_;
     sR = sR_;
